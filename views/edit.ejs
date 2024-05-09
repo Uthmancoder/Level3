@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <form
+      action="/update/<%= getUser.studentId %>"
+      method="post"
+      class="col-11 col-md-8 col-lg-5 mx-auto card bg-light shadow border-0 p-2 mt-5"
+    >
+      <h1 class="text-primary text-center">Edit Student Information</h1>
+      <input
+        type="text"
+        class="form-control my-2"
+        placeholder="Enter Student Name"
+        value="<%= getUser.studentName  %>"
+        name="studentName"
+      />
+      <input
+        type="text"
+        class="form-control my-2"
+        placeholder="Enter Student Email"
+        value="<%= getUser.studentEmail  %>"
+        name="studentEmail"
+      />
+      <input
+        type="text"
+        class="form-control my-2"
+        placeholder="Enter Student Id"
+        value="<%= getUser.studentId  %>"
+        name="studentId"
+      />
+      <input
+        type="text"
+        class="form-control my-2"
+        placeholder="Enter Student Course"
+        value="<%= getUser.studentCourse  %>"
+        name="studentCourse"
+      />
+      <button type="submit" class="btn btn-primary w-100">Update</button>
+    </form>
+  </body>
+</html>
